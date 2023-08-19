@@ -1,0 +1,71 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+<style>
+        .bg-image {
+        /* The image used */
+        background-image: url("../static/bg.jpg");
+
+        /* Add the blur effect */
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+
+        /* Full height */
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .login-box {
+        width: 280px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+    }
+</style>
+<body>
+    <div class="bg-image"></div>
+    <div class="container">
+        <div class="login-box">
+            <div class="card">
+                <article class="card-body">
+                    <img class="image-fluid" src="/static/logo.JPG" alt="" height="85px">
+                    <hr>
+                    <a href="/login" class="float-right btn btn-outline-primary">Login</a>
+                    <h4 class="card-title mb-4 mt-1">Register</h4>
+                    <form action="/register" method="POST">
+                        <div class="form-group">
+                            <label>Enter name</label>
+                            <input name="name" class="form-control" placeholder="Name" type="text" required>
+                        </div> <!-- form-group// -->
+                        <div class="form-group">
+                            <label>Enter email</label>
+                            <input name="email" class="form-control" placeholder="Email" type="email" required>
+                        </div> <!-- form-group// -->
+                        <div class="form-group">
+                            <label>Set password</label>
+                            <input name="password" class="form-control" placeholder="******" type="password" required>
+                        </div> <!-- form-group// -->
+                        <div class="form-group text-danger">
+                            <% if(messages.error) { %>
+                            <%= messages.error %>
+                            <% } %>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block"> Register </button>
+                        </div> <!-- form-group// -->
+                    </form>
+                </article>
+            </div> <!-- card.// -->
+        </div>
+    </div>
+</body>
