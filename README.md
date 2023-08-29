@@ -1,8 +1,5 @@
-# miniProject
-This project is made as a mini project for 6th semester, B Tech IT, SMIT (Majitar)
-Author: Anuran Dutta
-This project is live! Visit- "https://bravo-fitness.herokuapp.com/login"
-
+This project is made as a mini project for 6th semester, Bsc Computer Science Third Year (SIES SION)
+Author: Shrinidhi Shetty
 Packages used-
 +-- bcrypt@4.0.0
 +-- dotenv@8.2.0
